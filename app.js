@@ -5,11 +5,11 @@ function draw(ctx, centreX, centreY, radius, startAngle, endAngle, colorOfStroke
   ctx.strokeStyle=colorOfStroke;
   ctx.stroke();
 }
-function writeText(context, centreX, centreY, text, textColor){
+function writeText(context, centreX, centreY, text, textColor, textFont = "20px Arial"){
   context.beginPath();
   context.fillStyle = textColor;
   context.fillText(text,centreX,centreY);
-  context.font="20px Arial";
+  context.font=textFont;
   context.fill();
 }
 window.onload = function() {
@@ -21,6 +21,7 @@ window.onload = function() {
   hr=d.getHours()%12;
   min=d.getMinutes();
   sec=d.getSeconds();
+
 
   hrRadius = 175;
   minRadius = 225;
@@ -35,6 +36,7 @@ window.onload = function() {
   secClock=sec*pi/30;
   var c=document.getElementById("canvas2");
   var ctx=c.getContext("2d");
+  ctx.clearRect(0,0,canvas2.width,canvas2.height);
   draw(ctx,centerCanvasX,centerCanvasY,secRadius,3*pi/2,secClock-pi/2,'#FF6A6A');
   if(sec==0 || sec==0 && min==0)
   {
@@ -60,5 +62,14 @@ window.onload = function() {
     }
     writeText(ctx,posX,posY,".",whiteColor);
   }
+  var format = (x) => {
+    if(x<10)
+      return "0"+x.toString();
+    return x.toString();
+  }
+  hr = format(hr);
+  min = format(min);
+  sec = format(sec);
+  writeText(ctx,centerCanvasX, centerCanvasY, hr+":"+min+":"+sec, whiteColor, "50px Arial");
 }
 setInterval(window.onload, 1000);
