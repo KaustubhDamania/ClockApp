@@ -10,7 +10,13 @@ function writeText(context, centreX, centreY, text, textColor, textFont = "20px 
   context.fillStyle = textColor;
   context.fillText(text,centreX,centreY);
   context.font=textFont;
+  console.log(textFont);
   context.fill();
+}
+var format = (x) => {
+  if(x<10)
+    return "0"+x.toString();
+  return x.toString();
 }
 window.onload = function() {
   var pi=Math.PI;
@@ -61,11 +67,6 @@ window.onload = function() {
       continue;
     }
     writeText(ctx,posX,posY,".",whiteColor);
-  }
-  var format = (x) => {
-    if(x<10)
-      return "0"+x.toString();
-    return x.toString();
   }
   hr = format(hr);
   min = format(min);
