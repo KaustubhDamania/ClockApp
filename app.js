@@ -10,7 +10,6 @@ function writeText(context, centreX, centreY, text, textColor, textFont = "20px 
   context.fillStyle = textColor;
   context.fillText(text,centreX,centreY);
   context.font=textFont;
-  console.log(textFont);
   context.fill();
 }
 var format = (x) => {
