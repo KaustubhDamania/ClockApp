@@ -28,13 +28,13 @@ window.onload = function() {
   secClock=sec*pi/30;
   var c=document.getElementById("canvas2");
   var ctx=c.getContext("2d");
-  draw(ctx,centerCanvasX,centerCanvasY,200,3*pi/2,secClock-pi/2,'#FF6A6A');
+  draw(ctx,centerCanvasX,centerCanvasY,300,3*pi/2,secClock-pi/2,'#FF6A6A');
   if(sec==0 || sec==0 && min==0)
   {
     ctx.clearRect(0,0,canvas2.width,canvas2.height);
   }
   draw(ctx,centerCanvasX,centerCanvasY,250,3*pi/2,minClock-pi/2,'#00BFA5');
-  draw(ctx,centerCanvasX,centerCanvasY,300,3*pi/2,hrClock-pi/2,'#3D5AFE');
+  draw(ctx,centerCanvasX,centerCanvasY,200,3*pi/2,hrClock-pi/2,'#3D5AFE');
   ctx.beginPath();
   ctx.arc(centerCanvasX,centerCanvasY,400,0,2*pi,false);
   ctx.lineWidth=5;
