@@ -70,6 +70,6 @@ window.onload = function() {
   hr = format(hr);
   min = format(min);
   sec = format(sec);
-  writeText(ctx,centerCanvasX, centerCanvasY, hr+":"+min+":"+sec, whiteColor, "50px Arial");
+  writeText(ctx,centerCanvasX-25, centerCanvasY, hr+":"+min+":"+sec, whiteColor,"50px Arial");
 }
 setInterval(window.onload, 1000);
