@@ -1,7 +1,7 @@
 function draw(ctx, centreX, centreY, radius, startAngle, endAngle, colorOfStroke) {
   ctx.beginPath();
   ctx.arc(centreX,centreY,radius,startAngle,endAngle,false);
-  ctx.lineWidth=50;
+  ctx.lineWidth=40;//50;
   ctx.strokeStyle=colorOfStroke;
   ctx.stroke();
 }
@@ -28,11 +28,17 @@ window.onload = function() {
   sec=d.getSeconds();
 
 
-  hrRadius = 175;
+  /*hrRadius = 175;
   minRadius = 225;
   secRadius = 275;
   dotRadius = 350;
-  outerRadius = 400;
+  outerRadius = 400;*/
+  hrRadius = 125;//175-75;
+  minRadius = 165;//225-75;
+  secRadius = 205;//275-75;
+  dotRadius = 365-75;
+  outerRadius = 415-75;
+
   whiteColor = '#F0F0F0';
 
   var hrClock, minClock, secClock;
