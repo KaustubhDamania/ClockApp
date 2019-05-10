@@ -5,7 +5,7 @@ function draw(ctx, centreX, centreY, radius, startAngle, endAngle, colorOfStroke
   ctx.strokeStyle=colorOfStroke;
   ctx.stroke();
 }
-function writeText(context, centreX, centreY, text, textColor, textFont = "20px Arial"){
+function writeText(context, centreX, centreY, text, textColor, textFont = "15px Arial"){
   context.beginPath();
   context.fillStyle = textColor;
   context.fillText(text,centreX,centreY);
@@ -76,6 +76,8 @@ window.onload = function() {
   hr = format(hr);
   min = format(min);
   sec = format(sec);
-  writeText(ctx,centerCanvasX-25, centerCanvasY, hr+":"+min+":"+sec, whiteColor,"50px Arial");
+  time = hr+":"+min+":"+sec;
+  var timetag = document.getElementById('time');
+  timetag.innerHTML = time;
 }
 setInterval(window.onload, 1000);

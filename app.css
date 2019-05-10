@@ -4,3 +4,11 @@ canvas{
 body{
     background-color: #202833;
 }
+#time{
+    position: fixed;
+    left: 46.5vw;
+    top: 46vh;
+    font-size: 1.5vw;
+    color: #F0F0F0;
+    font-style: "Arial"
+}
