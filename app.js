@@ -25,8 +25,10 @@ window.onload = function() {
                 console.log('SW registered');
             } catch (error) {
                 console.log('SW failed');
-
             }
+        }
+        else{
+            console.log('SW didnt register');
         }
     });
 
