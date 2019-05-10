@@ -18,19 +18,17 @@ var format = (x) => {
   return x.toString();
 }
 window.onload = function() {
-    window.addEventListener("", async e => { // ## trigger on load
-        if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
-            try {
-                navigator.serviceWorker.register('serviceworker.js');
-                console.log('SW registered');
-            } catch (error) {
-                console.log('SW failed');
-            }
+    if ('serviceWorker' in navigator) { // show other serviceworker in application tabs
+        try {
+            navigator.serviceWorker.register('serviceworker.js');
+            console.log('SW registered');
+        } catch (error) {
+            console.log('SW failed');
         }
-        else{
-            console.log('SW didnt register');
-        }
-    });
+    }
+    else{
+        console.log('SW didnt register');
+    }
 
   var pi=Math.PI;
   var d = new Date();
