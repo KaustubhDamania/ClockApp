@@ -78,8 +78,9 @@ window.onload = function() {
   sec = format(sec);
   time = hr+":"+min+":"+sec;
   var timetag = document.getElementById('time');
-  timetag.style.left = (centerCanvasX-25).toString()+"px";
-  timetag.style.top = (centerCanvasY-10).toString()+"px";
+  console.log(canvas2.height);
+  //timetag.style.left = "40vw";//(centerCanvasX-25).toString()+"px";
+  //timetag.style.top = "46vh";//(centerCanvasY-10).toString()+"px";
   timetag.innerHTML = time;
 }
 setInterval(window.onload, 1000);
