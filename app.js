@@ -18,6 +18,12 @@ var format = (x) => {
   return x.toString();
 }
 window.onload = function() {
+  /*'use strict';
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./serviceworker.js');
+}*/
+
   var pi=Math.PI;
   var d = new Date();
   var hr,min,sec;
@@ -79,8 +85,8 @@ window.onload = function() {
   time = hr+":"+min+":"+sec;
   var timetag = document.getElementById('time');
   console.log(canvas2.height);
-  //timetag.style.left = "40vw";//(centerCanvasX-25).toString()+"px";
-  //timetag.style.top = "46vh";//(centerCanvasY-10).toString()+"px";
+  timetag.style.left = (centerCanvasX-25).toString()+"px";
+  timetag.style.top = (centerCanvasY-10).toString()+"px";
   timetag.innerHTML = time;
 }
 setInterval(window.onload, 1000);

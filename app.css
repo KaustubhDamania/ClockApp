@@ -12,9 +12,7 @@ body{
 }
 #time{
     position: absolute;
-    top: 47%;
-    left: 47%;
-    font-size: 1.5vw;
+    font-size: 25px;
     color: #F0F0F0;
     font-style: "Arial"
 }
