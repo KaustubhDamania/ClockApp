@@ -2,7 +2,7 @@
   "name": "ClockApp",
   "short_name": "ClockApp",
   "lang": "en-US",
-  "start_url": "/index.html",
+  "start_url": "/ClockApp/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#202833",
