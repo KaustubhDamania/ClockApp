@@ -1,11 +1,11 @@
 function draw(ctx, centreX, centreY, radius, startAngle, endAngle, colorOfStroke) {
   ctx.beginPath();
   ctx.arc(centreX,centreY,radius,startAngle,endAngle,false);
-  ctx.lineWidth=50;
+  ctx.lineWidth=40;//50;
   ctx.strokeStyle=colorOfStroke;
   ctx.stroke();
 }
-function writeText(context, centreX, centreY, text, textColor, textFont = "20px Arial"){
+function writeText(context, centreX, centreY, text, textColor, textFont = "15px Arial"){
   context.beginPath();
   context.fillStyle = textColor;
   context.fillText(text,centreX,centreY);
@@ -28,11 +28,17 @@ window.onload = function() {
   sec=d.getSeconds();
 
 
-  hrRadius = 175;
+  /*hrRadius = 175;
   minRadius = 225;
   secRadius = 275;
   dotRadius = 350;
-  outerRadius = 400;
+  outerRadius = 400;*/
+  hrRadius = 125;//175-75;
+  minRadius = 165;//225-75;
+  secRadius = 205;//275-75;
+  dotRadius = 365-75;
+  outerRadius = 415-75;
+
   whiteColor = '#F0F0F0';
 
   var hrClock, minClock, secClock;
@@ -70,6 +76,11 @@ window.onload = function() {
   hr = format(hr);
   min = format(min);
   sec = format(sec);
-  writeText(ctx,centerCanvasX-25, centerCanvasY, hr+":"+min+":"+sec, whiteColor,"50px Arial");
+  time = hr+":"+min+":"+sec;
+  var timetag = document.getElementById('time');
+  console.log(canvas2.height);
+  //timetag.style.left = "40vw";//(centerCanvasX-25).toString()+"px";
+  //timetag.style.top = "46vh";//(centerCanvasY-10).toString()+"px";
+  timetag.innerHTML = time;
 }
 setInterval(window.onload, 1000);

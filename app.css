@@ -1,5 +1,22 @@
 canvas{
   background-color: #202833;
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+body{
+    background-color: #202833;
+}
+#time{
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    font-size: 1.5vw;
+    color: #F0F0F0;
+    font-style: "Arial"
 }
 body{
   background-color: #202833;
